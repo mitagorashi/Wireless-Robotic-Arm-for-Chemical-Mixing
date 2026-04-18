@@ -1,33 +1,40 @@
-# Wireless Robotic Arm for Chemical Mixing (5-DOF)
+# Wireless Robotic Arm for Chemical Mixing Applications
 
-> **A simulation-validated, Arduino-based robotic system designed for hazardous laboratory automation.**
+![MIT App Interface](media/Robotic_Arm.png)
+
+> **A simulation-validated, 5-DOF robotic system designed to automate hazardous chemical handling via smartphone control.**
 
 ## 📌 Project Overview
-[cite_start]This project addresses laboratory safety risks by providing a low-cost, 5-Degrees-of-Freedom (DOF) robotic arm for chemical mixing[cite: 10, 53]. [cite_start]By utilizing a wireless interface, operators can handle hazardous or toxic substances from a safe distance, reducing exposure by up to 85%[cite: 55, 78].
+This project presents a cost-effective solution for laboratory safety by automating chemical mixing tasks. Using an **Arduino Nano** and a custom **Android application**, the system allows researchers to perform precise mixing motions remotely, eliminating direct exposure to toxic, corrosive, or volatile substances. 
 
-## 🚀 Technical Features
-* [cite_start]**5-DOF Architecture**: Optimized kinematic chain featuring Waist, Shoulder, Elbow, Wrist Pitch, and Gripper joints [cite: 104, 106-110].
-* [cite_start]**Wireless Control**: HC-05 Bluetooth integration for remote operation via Android devices[cite: 11, 84].
-* [cite_start]**Motion Smoothing**: Custom C++ implementation using incremental delay loops to prevent liquid splashing and mechanical "jerk" [cite: 158-160, 352].
-* [cite_start]**Input Sanitization**: Robust parsing logic with whitespace trimming and case-insensitivity for reliable command execution [cite: 183-186].
-* [cite_start]**Digital Twin Validation**: Fully simulated in Proteus ISIS to verify logic and electrical integrity before physical builds[cite: 14, 117].
+## 🚀 Key Features
+* **5-DOF Articulated Design**: Optimized kinematic chain featuring Waist, Shoulder, Elbow, Wrist Pitch, and Gripper joints to maintain vertical stability for laboratory glassware.
+* **Wireless Smartphone Control**: Custom-built interface using **MIT App Inventor** that communicates with the arm via an HC-05 Bluetooth module.
+* **Motion Smoothing Algorithm**: Implemented C++ "Soft-Start/Soft-Stop" logic using incremental delay loops to prevent liquid sloshing and mechanical stress.
+* **Input Sanitization**: Robust parsing layer that handles case-insensitive commands and whitespace trimming for high reliability across different control interfaces.
+* **Hybrid Interface Support**: Capable of switching between independent embedded firmware and a PC-centric **MATLAB/Firmata** control mode for complex trajectory planning.
 
-## 🛠️ System Components
-* [cite_start]**Microcontroller**: Arduino Nano (ATmega328P)[cite: 81, 112].
-* [cite_start]**Actuators**: 5x SG90 Micro Servos[cite: 113].
-* [cite_start]**Communication**: HC-05 Bluetooth Module (Serial Port Profile)[cite: 84, 114].
-* [cite_start]**GUI**: Custom Android App developed via MIT App Inventor[cite: 13, 166].
-* [cite_start]**Alternative Control**: PC-Centric interface utilizing MATLAB and the Firmata protocol[cite: 189, 194].
+## 🛠️ Tech Stack
+* **Microcontroller**: Arduino Nano (ATmega328P).
+* **Wireless Comms**: HC-05 Bluetooth Module (SPP Protocol).
+* **Actuators**: 5x SG90 Micro Servos.
+* **Design & Simulation**: Proteus 8 Professional, MIT App Inventor.
+* **Advanced Computation**: MATLAB R2023a (Support Package for Arduino).
 
-## 📊 Simulation Performance
-[cite_start]The system was validated through a live data link between the smartphone app and the Proteus simulation engine[cite: 337].
-* [cite_start]**Latency**: Recorded at less than 20ms for real-time responsiveness[cite: 141].
-* [cite_start]**Home Positioning**: Automatic calibration to safety coordinates (90°, 150°, 35°, 85°, 80°) upon boot [cite: 322-327].
+## 📊 Simulation & Validation
+The system logic was fully validated in a **Digital Twin** environment using Proteus ISIS. 
+* **Real-time Link**: Established a 9600 bps wireless data bridge between the Android smartphone and the simulation engine with <20ms latency.
+* **Safety Homing**: The system includes a pre-programmed safety sequence that returns all motors to "Home" positions (90°, 150°, 35°, 85°, 80°) upon startup to ensure a safe workspace.
 
-## 📂 Repository Structure
-* `/src`: Arduino (.ino) and MATLAB (.m) source code.
-* `/simulation`: Proteus Design Suite files and compiled .hex firmware.
-* `/docs`: Full technical project report and pin mapping tables.
+## 📐 Pin Configuration
+| Component | Function | Arduino Pin |
+| :--- | :--- | :--- |
+| Servo 1 | Waist (Base) | D5 |
+| Servo 2 | Shoulder | D6 |
+| Servo 3 | Elbow | D7 |
+| Servo 4 | Wrist Pitch | D9 |
+| Servo 5 | Gripper | D10 |
+| Bluetooth | RX / TX | D0 / D1 |
 
 ---
-*Developed as part of an Electrical Engineering research project focusing on industrial automation and robotics.*
+*Developed for research in Laboratory Automation and Industry 4.0 applications.*
