@@ -1,8 +1,10 @@
 # Wireless Robotic Arm for Chemical Mixing Applications
 
+> **A simulation-validated, 5-DOF robotic system designed to automate hazardous chemical handling via smartphone control.**
+
 ![MIT App Interface](media/Robotic_Arm.png)
 
-> **A simulation-validated, 5-DOF robotic system designed to automate hazardous chemical handling via smartphone control.**
+
 
 ## 📌 Project Overview
 This project presents a cost-effective solution for laboratory safety by automating chemical mixing tasks. Using an **Arduino Nano** and a custom **Android application**, the system allows researchers to perform precise mixing motions remotely, eliminating direct exposure to toxic, corrosive, or volatile substances. 
