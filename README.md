@@ -1,5 +1,10 @@
 # Wireless Robotic Arm for Chemical Mixing Applications
 
+[![Arduino](https://img.shields.io/badge/Microcontroller-Arduino_Nano-00979D?style=flat-square&logo=arduino)](#)
+[![MIT App Inventor](https://img.shields.io/badge/Interface-MIT_App_Inventor-FF8C00?style=flat-square)](#)
+[![Bluetooth](https://img.shields.io/badge/Comms-HC--05_Bluetooth-0082FC?style=flat-square&logo=bluetooth)](#)
+[![Simulation](https://img.shields.io/badge/Simulation-Proteus_ISIS-brightgreen?style=flat-square)](#)
+[![C++](https://img.shields.io/badge/Firmware-C++-00599C?style=flat-square&logo=c%2B%2B)](#)
 > **A simulation-validated, 5-DOF robotic system designed to automate hazardous chemical handling via smartphone control.**
 
 ![MIT App Interface](media/Robotic_Arm.png)
